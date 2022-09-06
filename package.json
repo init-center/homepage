@@ -1,0 +1,36 @@
+{
+  "name": "homepage",
+  "version": "1.0.0",
+  "description": "雀",
+  "type": "module",
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "gulp build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/gulp": "^4.0.9",
+    "@types/gulp-autoprefixer": "^0.0.33",
+    "@types/gulp-connect": "^5.0.5",
+    "@types/gulp-htmlmin": "^1.3.32",
+    "@types/gulp-sass": "^5.0.0",
+    "@types/gulp-uglify": "^3.0.7",
+    "@types/node": "^18.7.14",
+    "del": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-replace": "^1.1.3",
+    "gulp-sass": "^5.1.0",
+    "gulp-typescript": "6.0.0-alpha.1",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.54.8",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.2"
+  }
+}
