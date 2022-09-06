@@ -60,7 +60,11 @@ gulp.task("assets", function () {
   return gulp.src(["./src/assets/**/*"]).pipe(gulp.dest("./dist/assets"));
 });
 
-gulp.task("build", gulp.series("clean", "assets", "styles", "ts", "html"));
+gulp.task("robots", function () {
+  return gulp.src(["./robots.txt"]).pipe(gulp.dest("./dist")).pipe(connect.reload());
+});
+
+gulp.task("build", gulp.series("clean", "assets", "styles", "ts", "html", "robots"));
 gulp.task("default", gulp.series("build"));
 
 gulp.task("setDev", function (cb) {
