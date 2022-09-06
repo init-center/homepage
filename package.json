@@ -1,14 +1,14 @@
 {
   "name": "homepage",
   "version": "1.0.0",
-  "description": "雀",
+  "description": "雀's homepage",
   "type": "module",
   "scripts": {
     "dev": "gulp dev",
     "build": "gulp build"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["homepage"],
+  "author": "SUPER_AI",
   "license": "MIT",
   "devDependencies": {
     "@types/gulp": "^4.0.9",
