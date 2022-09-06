@@ -24,7 +24,7 @@ body {
   cursor: none;
 
   &.is-touch-device {
-    cursor: default;
+    cursor: auto;
   }
 
   .main {
@@ -78,12 +78,15 @@ body {
         width: 1.8em;
         height: 1.8em;
         opacity: 0;
-        transform: translate3d(-100%, 100%, 0);
-        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        transform: perspective(400px) translate3d(-100%, 0, 0)
+          rotate3d(0, 1, 0, -360deg);
+        transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+        backface-visibility: visible;
 
         &.ready {
           opacity: 1;
-          transform: translate3d(0, 0, 0);
+          transform: perspective(400px) translate3d(0, 0, 0)
+            rotate3d(0, 1, 0, 0deg);
         }
 
         a {
@@ -96,7 +99,8 @@ body {
 
       @for $i from 1 through 6 {
         .icon:nth-child(#{$i}) {
-          transition-delay: calc(#{math.abs($i - 3)} * 0.3s);
+          // transition-delay: calc(#{math.abs($i - 3)} * 0.25s);
+          transition-delay: $i * 0.25s;
         }
       }
     }
@@ -109,6 +113,7 @@ body {
     left: 0;
     width: 12px;
     height: 12px;
+    opacity: 0;
     background-color: var(--pointer-bgc);
     mix-blend-mode: exclusion;
     border-radius: 50%;
@@ -121,6 +126,10 @@ body {
     height: 42px;
     background: #222;
     transition: 0.15s ease-out;
+  }
+
+  .pointer-show {
+    opacity: 1 !important;
   }
 }
 
