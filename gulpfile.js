@@ -39,7 +39,7 @@ gulp.task("html", function () {
     replace(/<!-- icon=(.+) -->/g, (match, p1) => {
       const item = icons[p1];
       return item
-        ? `<a href="${item.link}" target="_blank">${item.icon}</a>`
+        ? `<a href="${item.link}" title="${item.title}" target="_blank">${item.icon}</a>`
         : match;
     })
   );
